@@ -64,3 +64,10 @@ li {
   margin: 0 auto;
   padding: 35px;
 }
+
+small {
+  display: block;
+  text-align: center;
+  margin: -46px;
+  font-size: 12px;
+}
