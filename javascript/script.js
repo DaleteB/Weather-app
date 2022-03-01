@@ -1,6 +1,6 @@
 let newDate = new Date();
 
-let h4 = document.querySelector("h4");
+let date = document.querySelector("#date");
 
 let hours = newDate.getHours();
 if (hours < 10) {
@@ -22,7 +22,7 @@ let days = [
 ];
 let day = days[newDate.getDay()];
 
-h4.innerHTML = `${day} ${hours}:${minutes}`;
+date.innerHTML = `${day} ${hours}:${minutes}`;
 
 function searchForm(event) {
   event.preventDefault();
@@ -40,8 +40,8 @@ buttonSubmit.addEventListener("click", searchForm);
 
 function searchCity(response) {
   let temperature = Math.round(response.data.main.temp);
-  let temp = document.querySelector("#currentTemperature");
-  temp.innerHTML = `${temperature}°C`;
+  let temp = document.querySelector("#temp");
+  temp.innerHTML = `${temperature}`;
 }
 
 function handlePosition(position) {
@@ -57,8 +57,8 @@ function iAmHere(response) {
   let location = response.data.name;
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${location}`;
-  let temp = document.querySelector("#currentTemperature");
-  temp.innerHTML = `${temperature}°C`;
+  let temp = document.querySelector("#temp");
+  temp.innerHTML = `${temperature}`;
 }
 let buttonRequest = document.querySelector("#requestLocation");
 buttonRequest.addEventListener("click", getPosition);
