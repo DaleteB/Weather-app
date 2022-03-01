@@ -43,6 +43,10 @@ function searchCity(response) {
   let temp = document.querySelector("#temp");
   temp.innerHTML = `${temperature}`;
 
+  let description = response.data.weather[0].main;
+  let descriptionNow = document.querySelector("#description");
+  descriptionNow.innerHTML = description;
+
   let humidity = Math.round(response.data.main.humidity);
   let humi = document.querySelector("#humidity");
   humi.innerHTML = `${humidity}`;
@@ -67,7 +71,11 @@ function iAmHere(response) {
   h1.innerHTML = `${location}`;
   let temp = document.querySelector("#temp");
   temp.innerHTML = `${temperature}`;
-  
+
+  let description = response.data.weather[0].main;
+  let descriptionNow = document.querySelector("#description");
+  descriptionNow.innerHTML = description;
+
   let humidity = Math.round(response.data.main.humidity);
   let humi = document.querySelector("#humidity");
   humi.innerHTML = `${humidity}`;
