@@ -42,6 +42,14 @@ function searchCity(response) {
   let temperature = Math.round(response.data.main.temp);
   let temp = document.querySelector("#temp");
   temp.innerHTML = `${temperature}`;
+
+  let humidity = Math.round(response.data.main.humidity);
+  let humi = document.querySelector("#humidity");
+  humi.innerHTML = `${humidity}`;
+
+  let wind = Math.round(response.data.wind.speed);
+  let windy = document.querySelector("#wind");
+  windy.innerHTML = `${wind}`;
 }
 
 function handlePosition(position) {
@@ -59,6 +67,14 @@ function iAmHere(response) {
   h1.innerHTML = `${location}`;
   let temp = document.querySelector("#temp");
   temp.innerHTML = `${temperature}`;
+  
+  let humidity = Math.round(response.data.main.humidity);
+  let humi = document.querySelector("#humidity");
+  humi.innerHTML = `${humidity}`;
+
+  let wind = Math.round(response.data.wind.speed);
+  let windy = document.querySelector("#wind");
+  windy.innerHTML = `${wind}`;
 }
 let buttonRequest = document.querySelector("#requestLocation");
 buttonRequest.addEventListener("click", getPosition);
