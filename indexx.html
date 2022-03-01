@@ -24,7 +24,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="city"
+                  id="searchCity"
                   placeholder="Type city here"
                   aria-label="Type city here"
                   aria-describedby="submitCity"
@@ -42,7 +42,7 @@
               </div>
               <hr />
             </form>
-            <h1 id="cityNow"></h1>
+            <h1></h1>
             <ul>
               <li id="date"></li>
               <li id="description"></li>
@@ -53,14 +53,14 @@
                   <div style="float: left">
                     <span class="temp" id="temp"> 19</span>
                     <span class="units">
-                      <a href="#" id="celsius-link">°C</a>
+                      <a href="#" id="celsius-link">°C</a> |
                       <a href="#" id="fahrenheit-link">°F</a>
                     </span>
                   </div>
                 </div>
               </div>
               <div class="col-12">
-                <ul>
+                <ul class="discription">
                   <li>Humidity: <span id="humidity"></span> %</li>
                   <li>Wind: <span id="wind"></span> km/h</li>
                 </ul>
@@ -120,6 +120,9 @@
           </div>
         </div>
       </div>
+      <small>
+        <a href=""></a>
+      </small>
     </div>
     <script src="javascript/script.js"></script>
   </body>

@@ -1,25 +1,49 @@
 body {
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  font-family: Arial, Helvetica, sans-serif;
 }
 .card {
   margin: 50px auto;
   padding: 10px;
   width: 60%;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
-.city {
+.searchCity {
   width: 90%;
 }
 .submitCity {
   width: 100%;
 }
-
+h1 {
+  color: #202124;
+  font-size: 24px;
+  margin: 0;
+}
+ul {
+  margin: 0 auto;
+  padding: 0;
+}
+li {
+  color: rgb(122, 121, 121);
+  list-style: none;
+}
 .temp {
+  position: relative;
+  left: 0;
+  bottom: -58px;
   font-size: 50px;
 }
-.moreInfos {
-  font-style: italic;
+.units {
+  position: relative;
+  left: 0;
+  bottom: -36px;
+}
+.discription {
+  font-size: 19px;
+  position: relative;
+  right: -287px;
+  top: -49px;
   margin: 0 auto;
-  color: grey;
+  padding: 15px;
 }
 .nextDays {
   text-align: left;
@@ -32,8 +56,10 @@ body {
   font-weight: bolder;
 }
 .col-2 {
-  border: 1px solid;
+  background: #e0eaf4;
+  border: 1px transparent;
   border-radius: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   margin: 0 auto;
   padding: 35px;
