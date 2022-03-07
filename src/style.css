@@ -2,6 +2,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .weather-app-wrapper {
+  background: linear-gradient(
+    178.6deg,
+    rgb(232, 245, 253) 3.3%,
+    rgb(252, 253, 255) 109.6%
+  );
   margin: 50px auto;
   max-width: 600px;
   padding: 20px;
@@ -42,13 +47,19 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
-
+.weather-temperature {
+  margin: 0;
+  padding: 0;
+}
 .weather-temperature img {
-  margin-right: 6px;
-  height: 64px;
-  width: 64px;
+  margin-right: 84px;
+  height: 88px;
+  width: 88px;
 }
 .weather-temperature strong {
+  position: relative;
+  left: 88px;
+  top: -75px;
   color: rgb(33, 33, 33);
   font-size: 64px;
   line-height: 1;
@@ -56,8 +67,10 @@ li:first-letter {
 }
 .weather-temperature .units {
   position: relative;
+  top: -106px;
+  right: -83px;
   font-size: 16px;
-  top: -34px;
+
   cursor: default;
 }
 
@@ -81,6 +94,7 @@ li:first-letter {
 
 .nextDays {
   margin: 0 auto;
+  color: #878787;
 }
 .weekdays {
   text-align: center;
@@ -92,6 +106,6 @@ li:first-letter {
 .source {
   display: block;
   text-align: center;
-  margin: 0;
+  margin: -52px auto;
   padding: 0;
 }

@@ -19,6 +19,7 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          
             <form id="search-form" class="mb-3">
               <div class="row">
                 <div class="col-12">
@@ -34,7 +35,7 @@
                 </div>
                 <div class="d-grid gap-2 d-md-block buttons">
                   <button class="btn btn-primary" type="submit" value="search" id="submitCity">Search</button>
-                  <button class="btn btn-primary" type="button" id="requestLocation">Current City</button>
+                  <button class="btn btn-primary" type="button" id="requestLocation">Current city</button>
                 </div>       
                </div>
                 
@@ -54,7 +55,7 @@
                 <div class="clearfix weather-temperature">
                   <img src=" " alt="" id="icon" class="float:left">
                   <div style="float:left">
-                    <strong id="temp"> 19</strong>
+                    <strong id="temp"> </strong>
                     <span class="units">
                       <a href="#" id="celsius-link" class="active">°C</a> |
                       <a href="#" id="fahrenheit-link" class="decoration">°F</a>
@@ -69,9 +70,12 @@
                 </ul>
               </div>
             </div>
-            <p class="nextDays">
+            <div class="nextDays">
+              <p class="nextDays">
               <em> Temperature for the following days </em>
             </p>
+            </div>
+            
             <hr />
             <div class="row">
               <div class="col-2">
@@ -133,12 +137,15 @@
         </div>
         
       </div>
-      <small id="source">
+      <div class="source">
+      <small >
         <a href="https://github.com/DaleteB/Weather-app" target="_blank" 
           >Open-source code</a
         >
-        , by Dalete Pokrywiesky
-      </small>
+        , by Dalete Pokrywiesky 
+      </small>  
+      </div>
+      
     </div>
     <script src="javascript/script.js"></script>
   </body>
