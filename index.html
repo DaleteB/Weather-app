@@ -34,7 +34,7 @@
                 </div>
                 <div class="d-grid gap-2 d-md-block buttons">
                   <button class="btn btn-primary" type="submit" value="search" id="submitCity">Search</button>
-                  <button class="btn btn-primary" type="button" id="requestLocation">Current</button>
+                  <button class="btn btn-primary" type="button" id="requestLocation">Current City</button>
                 </div>       
                </div>
                 
@@ -56,8 +56,8 @@
                   <div style="float:left">
                     <strong id="temp"> 19</strong>
                     <span class="units">
-                      <a href="#" id="celsius-link">°C</a> |
-                      <a href="#" id="fahrenheit-link">°F</a>
+                      <a href="#" id="celsius-link" class="active">°C</a> |
+                      <a href="#" id="fahrenheit-link" class="decoration">°F</a>
                     </span>
                   </div>
                 </div>
@@ -133,13 +133,13 @@
         </div>
         
       </div>
-      <small>
-        <a href="https://github.com/DaleteB/Weather-app" target="_blank"
+      <small id="source">
+        <a href="https://github.com/DaleteB/Weather-app" target="_blank" 
           >Open-source code</a
         >
         , by Dalete Pokrywiesky
       </small>
     </div>
-    <script src="javascript/scripts.js"></script>
+    <script src="javascript/script.js"></script>
   </body>
 </html>

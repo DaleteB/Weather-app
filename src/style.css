@@ -58,11 +58,40 @@ li:first-letter {
   position: relative;
   font-size: 16px;
   top: -34px;
+  cursor: default;
 }
 
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  text-decoration: none;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.weather-temperature .decoration {
+  text-decoration: none;
+  cursor: default;
+}
+.weather-temperature .decoration:hover {
+  text-decoration: none;
+}
+
+.nextDays {
+  margin: 0 auto;
+}
 .weekdays {
   text-align: center;
   padding: 10px;
   margin: 0 auto;
   font-weight: bolder;
+}
+
+.source {
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
