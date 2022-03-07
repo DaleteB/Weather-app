@@ -33,7 +33,7 @@
                 />
                 </div>
                 <div class="d-grid gap-2 d-md-block buttons">
-                  <button class="btn btn-primary" type="submit" value="search">Search</button>
+                  <button class="btn btn-primary" type="submit" value="search" id="submitCity">Search</button>
                   <button class="btn btn-primary" type="button" id="requestLocation">Current</button>
                 </div>       
                </div>
@@ -43,7 +43,7 @@
               <hr />
             </form>
             <div class="overview">
-             <h1>Lisbon</h1>
+             <h1 id="city">Lisbon</h1>
             <ul>
               <li id="date"></li>
               <li class="descriptionNow" id="description">Sunny</li>
@@ -52,9 +52,9 @@
             <div class="row">
               <div class="col-6">
                 <div class="clearfix weather-temperature">
-                  <img src=" " alt="Sun" id="icon" class="float:left">
+                  <img src=" " alt="" id="icon" class="float:left">
                   <div style="float:left">
-                    <strong id="temperature"> 19</strong>
+                    <strong id="temp"> 19</strong>
                     <span class="units">
                       <a href="#" id="celsius-link">°C</a> |
                       <a href="#" id="fahrenheit-link">°F</a>
@@ -140,6 +140,6 @@
         , by Dalete Pokrywiesky
       </small>
     </div>
-    <script src="javascript/script.js"></script>
+    <script src="javascript/scripts.js"></script>
   </body>
 </html>
