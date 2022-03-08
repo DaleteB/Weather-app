@@ -52,14 +52,11 @@ li:first-letter {
   padding: 0;
 }
 .weather-temperature img {
-  margin-right: 84px;
+  margin-right: 6px;
   height: 88px;
   width: 88px;
 }
 .weather-temperature strong {
-  position: relative;
-  left: 88px;
-  top: -75px;
   color: rgb(33, 33, 33);
   font-size: 64px;
   line-height: 1;
@@ -67,11 +64,17 @@ li:first-letter {
 }
 .weather-temperature .units {
   position: relative;
-  top: -106px;
-  right: -83px;
+  top: -15px;
   font-size: 16px;
-
   cursor: default;
+}
+
+.units a {
+  text-decoration: none;
+}
+
+.float-left {
+  float: left;
 }
 
 .weather-temperature .active {
