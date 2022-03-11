@@ -21,10 +21,11 @@ body {
   margin: 0 auto;
   padding: 10px;
   text-align: center;
+  color: #38598b;
 }
 
 h1 {
-  color: #878787;
+  color: #000;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -96,8 +97,12 @@ li:first-letter {
 }
 
 .nextDays {
-  margin: 0 auto;
-  color: #878787;
+  display: block;
+  text-align: center;
+  margin-bottom: -1em;
+  padding: 0;
+  color: #000;
+  opacity: 0.7;
 }
 .weekdays {
   text-align: center;
@@ -106,6 +111,27 @@ li:first-letter {
   font-weight: bolder;
 }
 
+.weather-forecast {
+  margin: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+  font-weight: lighter;
+}
+
+.weather-forecast-temperatures {
+  font-size: 14px;
+  font-weight: bolder;
+}
 .source {
   display: block;
   text-align: center;
