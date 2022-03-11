@@ -96,7 +96,8 @@ function searchCity(response) {
 
 function search(city) {
   let apiKey = "8470682d02ce3ef83d09047bbc48b960";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let unit = "metric" || "units = imperial";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(searchCity);
 }
 
@@ -109,20 +110,19 @@ function handleSubmit(event) {
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
-
+  let fahrenheitMax = document.querySelector(
+    "#weather-forecast-temperature-max"
+  );
+  let fahrenheitMin = document.querySelector(
+    "#weather-forecast-temperature-min"
+  );
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
 
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let fahrenheitForecastMax = document.querySelector(
-    "#weather-forecast-temperature-max"
-  );
-  let fahrenheitForecastMin = document.querySelector(
-    "#weather-forecast-temperature-min"
-  );
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  fahrenheitForecastMax.innerHTML = Math.round(fahrenheitForecastMax);
-  fahrenheitForecastMin.innerHTML = Math.round(fahrenheitForecastMin);
+  fahrenheitMax.innerHTML = Math.round(fahrenheitMax);
+  fahrenheitMin.innerHTML = Math.round(fahrenheitMin);
 }
 
 function displayCelsiusTemperature(event) {
@@ -132,15 +132,11 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
 
   let temperatureElement = document.querySelector("#temp");
-  let celsiusForecastMax = document.querySelector(
-    "#weather-forecast-temperature-max"
-  );
-  let celsiusForecastMin = document.querySelector(
-    "#weather-forecast-temperature-min"
-  );
+  let celsiusMax = document.querySelector("#weather-forecast-temperature-max");
+  let celsiusMin = document.querySelector("#weather-forecast-temperature-min");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  celsiusForecastMax.innerHTML = Math.round(celsiusForecastMax);
-  celsiusForecastMin.innerHTML = Math.round(celsiusForecastMin);
+  celsiusMax.innerHTML = Math.round(celsiusMax);
+  celsiusMin.innerHTML = Math.round(celsiusMin);
 }
 
 let celsiusTemperature = null;
@@ -149,18 +145,10 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener(
-  "click",
-  displayFahrenheitTemperature,
-  displayForecast
-);
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener(
-  "click",
-  displayCelsiusTemperature,
-  displayForecast
-);
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Lisbon");
 
