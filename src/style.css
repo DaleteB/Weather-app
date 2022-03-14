@@ -2,20 +2,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .weather-app-wrapper {
-  background: linear-gradient(
-    178.6deg,
-    rgb(232, 245, 253) 3.3%,
-    rgb(252, 253, 255) 109.6%
-  );
+  background: #8ed6ff;
   margin: 50px auto;
   max-width: 600px;
   padding: 20px;
   border-radius: 5px;
-  border: thick double #32a1ce;
+  border: transparent;
 }
 
 .overview {
   margin-bottom: 20px;
+  padding: 10px;
+  border: transparent;
+  border-radius: 10px;
+  background-color: #fff8f581;
 }
 .buttons {
   margin: 0 auto;
@@ -62,10 +62,14 @@ li:first-letter {
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
+  position: relative;
+  top: -71px;
+  left: 111px;
 }
 .weather-temperature .units {
   position: relative;
-  top: -15px;
+  top: -104px;
+  left: 108px;
   font-size: 16px;
   cursor: default;
 }
@@ -74,26 +78,15 @@ li:first-letter {
   text-decoration: none;
 }
 
-.float-left {
-  float: left;
-}
-
 .weather-temperature .active {
   color: rgb(33, 33, 33);
   text-decoration: none;
   cursor: default;
 }
 
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
-
-.weather-temperature .decoration {
-  text-decoration: none;
-  cursor: default;
-}
-.weather-temperature .decoration:hover {
-  text-decoration: none;
+.col-6 {
+  margin: 0 auto;
+  padding: 0;
 }
 
 .nextDays {
@@ -112,7 +105,11 @@ li:first-letter {
 }
 
 .weather-forecast {
-  margin: 20px;
+  border: transparent;
+  border-radius: 10px;
+  background-color: #fff8f581;
+  margin: 10px;
+  padding: 10px;
   text-align: center;
   color: #000;
 }
@@ -137,4 +134,8 @@ li:first-letter {
   text-align: center;
   margin: -52px auto;
   padding: 0;
+}
+
+.source a {
+  text-decoration: none;
 }
